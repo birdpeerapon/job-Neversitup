@@ -1,0 +1,2 @@
+{"message":"17:06:26 /api/v1/product/getProduct => ReferenceError: object is not defined","level":"error"}
+{"message":"17:07:27 /api/v1/product/getProduct => ReferenceError: object is not defined","level":"error"}
