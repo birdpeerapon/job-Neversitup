@@ -5,10 +5,10 @@ module.exports = {
         client: 'mysql', // type database
         useNullAsDefault: true,
         connection: {
-            host: 'localhost',
-            user: 'root',
-            password: 'waterfire',
-            database: 'demo',
+            host: '165.22.98.197',
+            user: 'admin_systano', // username
+            password: 'admin_systano', // password
+            database: 'neversit' // database name
         },
         pool: {
             min: 0,

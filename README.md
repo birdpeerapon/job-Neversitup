@@ -1,12 +1,13 @@
+# BeforRunning Project 
+
 # Backend-Policy
-    Policy for develop at Zettasoft Dev
+    Policy for develop
 สร้าง .env
 ```
-    NODE_ENV=develop
-    PORT=7000
-    SIGN=GFKHFLHKT
-    IP=http://localhost
-    PREFIX=local
+   PORT=5500
+   PREFIX=JobTest
+   NODE_ENV=develop
+   SIGN=tokenforlogin
 ```
 
 # NODE_ENV 

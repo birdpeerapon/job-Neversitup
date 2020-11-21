@@ -2,8 +2,18 @@ const _ = require('lodash')
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
+const bcrypt = require('bcryptjs');
+const jsonwebtoken = require('jsonwebtoken');
+const dayjs = require('dayjs');
 require('dotenv').config()
 
+
+exports.generateToken = (Email) => {
+    let objToken = { Email }
+    req.token = jsonwebtoken.sign(objToken, process.env.SIGN, { expiresIn: '60d' });
+    req.token_login = dayjs().format('YYYY-MM-DD HH:mm:ss');
+
+}
 exports.getOriginPath = (originalUrl) => {
     let replace = originalUrl.replace(`/api/v1/${process.env.PREFIX}`, '');
     if (replace.includes('?')) {
@@ -131,4 +141,12 @@ exports.convertMimeType = (mimetype = '') => {
     }
 
     return mimetype;
+}
+exports.encrypted = async (password) => {
+    //let pass_encrypted = 0
+    const salt = bcrypt.genSaltSync(10);
+    const pass_encrypted = bcrypt.hashSync(password, salt);
+    return pass_encrypted
+
+
 }

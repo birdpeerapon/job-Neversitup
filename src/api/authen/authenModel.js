@@ -1,16 +1,11 @@
 
-
+const knex = require('../../knex');
 class authenModel {
-    getUser(trx, obj) {
-        return trx('tbl_user')
-            .select()
-            .where(obj)
+
+    async register(obj) {
+        // register in to db
     }
 
-    insertUser(trx, obj) {
-        return trx('tbl_user')
-            .insert(obj)
-    }
 }
 
 module.exports = new authenModel();
