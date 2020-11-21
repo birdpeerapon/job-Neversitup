@@ -17,6 +17,4 @@ const testConnect = async () => {
 
 testConnect();
 
-module.exports = {
-    knex
-};
+module.exports = knex;
